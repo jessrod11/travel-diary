@@ -44,7 +44,7 @@ const buildDomString = (faveArray) => {
     domString +=    `<h2>${favorite.location}</h2>`;
     domString +=    `<img src="${favorite.image}" alt="pic of Jamaica">;`
     domString +=    `<p>${favorite.description}</p>`;
-    domString +=    `<input id="input-field">`;
+    domString +=    `<textarea id="text-field"></textarea>`;
     domString +=    `<button class= "card-button">Submit Entry</button>`;
     domString += `</div>`;
     });
