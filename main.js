@@ -44,11 +44,30 @@ const buildDomString = (faveArray) => {
     domString +=    `<h2>${favorite.location}</h2>`;
     domString +=    `<img src="${favorite.image}" alt="pic of Jamaica">;`
     domString +=    `<p>${favorite.description}</p>`;
-    domString +=    `<textarea id="text-field"></textarea>`;
-    domString +=    `<button class= "card-button">Submit Entry</button>`;
+    domString +=    `<textarea id="text-field" class= "text-box"></textarea>`;
+    domString +=    `<button id= "get-button" class= "card-button">Submit Entry</button>`;
     domString += `</div>`;
     });
     printToDom(domString, "card-container");
 };
 
 buildDomString(myFaves);
+
+
+const grabButtons = document.getElementsByClassName('card-button');
+    for(let i=0; i< grabButtons.length; i++){
+    grabButtons[i].addEventListener('click', (e) => {
+        console.log("button event", e);
+        });
+    };
+
+    const submitEntryDomString = (textBox) => {
+        const grabText = document.getElementsByClassName('text-box');
+        for(let j=0; j< grabText.length; j++){
+            grabText[j].addEventListener('click', (e)=>{
+                console.log('text box event', e);
+            });
+        };
+    };
+
+    submitEntryDomString ();
