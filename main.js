@@ -42,7 +42,7 @@ const buildDomString = (faveArray) => {
     faveArray.forEach((favorite) => {
     domString += `<div class="card-holder">`;
     domString +=    `<h2>${favorite.location}</h2>`;
-    domString +=    `<img src="${favorite.image}" alt="pic of Jamaica">;`
+    domString +=    `<img src="${favorite.image}">`;
     domString +=    `<p>${favorite.description}</p>`;
     domString +=    `<textarea id="text-field" class= "text-box"></textarea>`;
     domString +=    `<button id= "get-button" class= "card-button">Submit Entry</button>`;
@@ -57,17 +57,18 @@ buildDomString(myFaves);
 const grabButtons = document.getElementsByClassName('card-button');
     for(let i=0; i< grabButtons.length; i++){
     grabButtons[i].addEventListener('click', (e) => {
-        console.log("button event", e);
+        if (e.target.className === 'card-button'){
+            
+            };
         });
     };
 
-    const submitEntryDomString = (textBox) => {
+    const submitEntryDomString = () => {
         const grabText = document.getElementsByClassName('text-box');
         for(let j=0; j< grabText.length; j++){
-            grabText[j].addEventListener('click', (e)=>{
-                console.log('text box event', e);
+            grabText[j].addEventListener('keypress', (e)=>{
+                let textValue = e.target.value;
+                return textValue;
             });
         };
     };
-
-    submitEntryDomString ();
