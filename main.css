@@ -2,7 +2,8 @@ body {
     background-color: blue;
 }
 
-h1 { 
+h1, h2 { 
+    font-family: 'Fontdiner Swanky', cursive;
     text-align: center;
     text-shadow: 2px 2px 10px #1C6EA4;
 }
@@ -15,6 +16,8 @@ img {
     flex-wrap: wrap;
     justify-content: space-around;
     height: 300px;
+    font-family: cursive;
+    font-weight: bold;
 }
 
 .card-holder {
