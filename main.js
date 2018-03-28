@@ -51,24 +51,50 @@ const buildDomString = (faveArray) => {
     printToDom(domString, "card-container");
 };
 
-buildDomString(myFaves);
-
-
+const textBox = document.getElementsByClassName('text-box');
 const grabButtons = document.getElementsByClassName('card-button');
-    for(let i=0; i< grabButtons.length; i++){
-    grabButtons[i].addEventListener('click', (e) => {
-        if (e.target.className === 'card-button'){
-            
-            };
-        });
-    };
+const deleteButtons =  document.getElementsByClassName('delete-button');
 
-    const submitEntryDomString = () => {
-        const grabText = document.getElementsByClassName('text-box');
-        for(let j=0; j< grabText.length; j++){
-            grabText[j].addEventListener('keypress', (e)=>{
-                let textValue = e.target.value;
-                return textValue;
-            });
-        };
+const submitButtonEvent = () => {
+    for(let i=0; i<grabButtons.length; i++){
+        const submitButton = grabButtons[i];
+        submitButton.addEventListener('click', newDomString);
     };
+}
+
+const newDomString = (e) => {
+  let newDom = '';
+  newDom += `<div class= "new-card">`;
+  newDom +=     `<h2>${e.target.parentNode.children[0].innerHTML}</h2>`;
+//   newDom +=     `<img src=${e.target.parentNode.children[1]}>`;
+  newDom +=     `<textarea>${e.target.parentNode.children[3].value}</textarea>`;
+  newDom +=     `<button class= "delete-button" id= 'delete-it'> Delete Entry</button>`;
+  newDom += `</div>`;
+    printToDom(newDom, 'output-container');
+};
+
+const deleteButtonEvent = () =>{
+    for(let i=0; i<deleteButtons.length; i++){
+        const deleteButton = deleteButtons[i];
+        deleteButton.addEventListener('click', deleteIt);
+    }
+};
+
+const deleteIt = (e) => {
+    console.log(e);
+};
+           
+
+const startApplication = () => {
+    buildDomString(myFaves);
+    submitButtonEvent();
+    deleteButtonEvent();
+};
+
+startApplication();
+    
+    
+
+
+
+
