@@ -50,10 +50,7 @@ const buildDomString = (faveArray) => {
     });
     printToDom(domString, "card-container");
 };
-
-const textBox = document.getElementsByClassName('text-box');
 const grabButtons = document.getElementsByClassName('card-button');
-const deleteButtons =  document.getElementsByClassName('delete-button');
 
 const submitButtonEvent = () => {
     for(let i=0; i<grabButtons.length; i++){
