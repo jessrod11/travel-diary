@@ -42,13 +42,44 @@ const buildDomString = (faveArray) => {
     faveArray.forEach((favorite) => {
     domString += `<div class="card-holder">`;
     domString +=    `<h2>${favorite.location}</h2>`;
-    domString +=    `<img src="${favorite.image}" alt="pic of Jamaica">;`
+    domString +=    `<img src="${favorite.image}">`;
     domString +=    `<p>${favorite.description}</p>`;
-    domString +=    `<textarea id="text-field"></textarea>`;
-    domString +=    `<button class= "card-button">Submit Entry</button>`;
+    domString +=    `<textarea id="text-field" class= "text-box"></textarea>`;
+    domString +=    `<button id= "get-button" class= "card-button">Submit Entry</button>`;
     domString += `</div>`;
     });
     printToDom(domString, "card-container");
 };
 
-buildDomString(myFaves);
+const textBox = document.getElementsByClassName('text-box');
+const grabButtons = document.getElementsByClassName('card-button');
+const deleteButtons =  document.getElementsByClassName('delete-button');
+
+const submitButtonEvent = () => {
+    for(let i=0; i<grabButtons.length; i++){
+        const submitButton = grabButtons[i];
+        submitButton.addEventListener('click', newDomString);
+    };
+}
+
+const newDomString = (e) => {
+  let newDom = '';
+  newDom += `<div class= "new-card">`;
+  newDom +=     `<h2>${e.target.parentNode.children[0].innerHTML}</h2>`;
+  newDom +=     `<h3>${e.target.parentNode.children[3].value}</h3>`;
+  newDom += `</div>`;
+    printToDom(newDom, 'output-container');
+};
+    
+const startApplication = () => {
+    buildDomString(myFaves);
+    submitButtonEvent();
+};
+
+startApplication();
+    
+    
+
+
+
+
