@@ -66,29 +66,14 @@ const newDomString = (e) => {
   let newDom = '';
   newDom += `<div class= "new-card">`;
   newDom +=     `<h2>${e.target.parentNode.children[0].innerHTML}</h2>`;
-//   newDom +=     `<img src=${e.target.parentNode.children[1]}>`;
-  newDom +=     `<textarea>${e.target.parentNode.children[3].value}</textarea>`;
-  newDom +=     `<button class= "delete-button" id= 'delete-it'> Delete Entry</button>`;
+  newDom +=     `<h3>${e.target.parentNode.children[3].value}</h3>`;
   newDom += `</div>`;
     printToDom(newDom, 'output-container');
 };
-
-const deleteButtonEvent = () =>{
-    for(let i=0; i<deleteButtons.length; i++){
-        const deleteButton = deleteButtons[i];
-        deleteButton.addEventListener('click', deleteIt);
-    }
-};
-
-const deleteIt = (e) => {
-    console.log(e);
-};
-           
-
+    
 const startApplication = () => {
     buildDomString(myFaves);
     submitButtonEvent();
-    deleteButtonEvent();
 };
 
 startApplication();
