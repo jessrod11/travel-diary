@@ -10,10 +10,10 @@ This travel diary assignment was created to showcase how well we could interact 
 
 3.The final result of printing the array should look like the following mockup: 
 ## Screenshots
-![Webpage]()
+![Webpage](https://github.com/jessrod11/travel-diary/blob/master/screenshots/screenshot1.png)
 
 ## Screenshots
-![Webpage]()
+![Webpage](https://github.com/jessrod11/travel-diary/blob/master/screenshots/screenshot2.png)
 
 
 4. The user should be able to type in the text box for a specific location, click the submit button on that card, and their entry should appear in a "diary" below the cards.
@@ -22,10 +22,7 @@ This travel diary assignment was created to showcase how well we could interact 
 5. The diary entries should build up as the user continues to type in cards and submit their entries. Newest entries should appear at the bottom. The final result will look like the following mockup: 
 
 ## Screenshots
-![Webpage]()
-
-## Screenshots
-![Webpage]()
+![Webpage](https://github.com/jessrod11/travel-diary/blob/master/img/screenshot3.png)
 
 ## How to Run
 1. Clone down this repo and cd into project.
