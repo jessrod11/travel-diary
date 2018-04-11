@@ -1,4 +1,3 @@
-console.log('Stix');
 const myFaves = [
     {
         location: "Jamaica",
