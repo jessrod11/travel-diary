@@ -22,7 +22,7 @@ This travel diary assignment was created to showcase how well we could interact 
 5. The diary entries should build up as the user continues to type in cards and submit their entries. Newest entries should appear at the bottom. The final result will look like the following mockup: 
 
 ## Screenshots
-![Webpage](hhttps://raw.githubusercontent.com/jessrod11/travel-diary/master/screenshots/screenshot3.png)
+![Webpage](https://github.com/jessrod11/travel-diary/blob/master/screenshots/screenshot3.png)
 
 ## How to Run
 1. Clone down this repo and cd into project.
